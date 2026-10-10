@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calc" aria-label="Calculator">
+    <header class="calc-head">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="title">Calculator</span>
+    </header>
+
+    <section class="screen" aria-live="polite">
+      <div id="expression" class="expression"></div>
+      <div id="display" class="display">0</div>
+    </section>
+
+    <section class="keys">
+      <button class="key fn" data-action="clear">AC</button>
+      <button class="key fn" data-action="sign">+/−</button>
+      <button class="key fn" data-action="percent">%</button>
+      <button class="key op" data-action="op" data-op="/">÷</button>
+
+      <button class="key" data-action="digit" data-digit="7">7</button>
+      <button class="key" data-action="digit" data-digit="8">8</button>
+      <button class="key" data-action="digit" data-digit="9">9</button>
+      <button class="key op" data-action="op" data-op="*">×</button>
+
+      <button class="key" data-action="digit" data-digit="4">4</button>
+      <button class="key" data-action="digit" data-digit="5">5</button>
+      <button class="key" data-action="digit" data-digit="6">6</button>
+      <button class="key op" data-action="op" data-op="-">−</button>
+
+      <button class="key" data-action="digit" data-digit="1">1</button>
+      <button class="key" data-action="digit" data-digit="2">2</button>
+      <button class="key" data-action="digit" data-digit="3">3</button>
+      <button class="key op" data-action="op" data-op="+">+</button>
+
+      <button class="key zero" data-action="digit" data-digit="0">0</button>
+      <button class="key" data-action="dot">.</button>
+      <button class="key eq" data-action="equals">=</button>
+    </section>
+
+    <section class="history">
+      <div class="history-head">
+        <span>History</span>
+        <button id="clearHistory" class="link">Clear</button>
+      </div>
+      <ul id="historyList"></ul>
+    </section>
+
+    <footer class="foot">Served from <code id="host">…</code></footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
